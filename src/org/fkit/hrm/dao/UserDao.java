@@ -20,7 +20,7 @@ import org.fkit.hrm.domain.User;
 
 public interface UserDao {
 	
-	// 根据登录名和密码查询员工.
+	// 根据登录名和密码查询员工...
 	@Select("select * from "+USERTABLE+" where loginname=#{loginname} and password=#{password}")
 	User selectByLoginnameAndPassword(@Param("loginname") String loginname,@Param("password") String password);
 	
