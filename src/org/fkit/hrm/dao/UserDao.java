@@ -42,9 +42,9 @@ public interface UserDao {
 	
 	// 根据参数查询用户总数
 	@SelectProvider(type=UserDynaSqlProvider.class,method="count")
-	Integer selectCount(Map<String,Object> params);
+	Integer count(Map<String,Object> params);
 	
 	// 动态插入用户
 	@SelectProvider(type=UserDynaSqlProvider.class,method="insertUser")
-	void saveUser(User user); 
+	void save(User user); 
 }
